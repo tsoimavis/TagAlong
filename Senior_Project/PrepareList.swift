@@ -19,10 +19,12 @@ class PrepareList: NSObject {
         let tag_3 = TagClass(inpTagName: "key",
         inpTagID: 3)
         
+        let loc_1 = LocationClass(inpLocationName: "Home", inpCoordinate: " 4854 oscar Court", inpTagItems: [])
          
         AppData.sharedInstance.currentTag.append(tag_1)
         AppData.sharedInstance.currentTag.append(tag_2)
         AppData.sharedInstance.currentTag.append(tag_3)
+        AppData.sharedInstance.currentLocation.append(loc_1)
     }
     
 }

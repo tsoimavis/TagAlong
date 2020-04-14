@@ -17,6 +17,12 @@
 		A7A7B53824452F07004FD557 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53724452F07004FD557 /* TagList.swift */; };
 		A7A7B53A24453087004FD557 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53924453087004FD557 /* AppData.swift */; };
 		A7A7B53C244531FC004FD557 /* PrepareList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53B244531FC004FD557 /* PrepareList.swift */; };
+		A7A7B53E244549DD004FD557 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53D244549DD004FD557 /* AddTagViewController.swift */; };
+		A7A7B54024455D23004FD557 /* ReadWriteOnDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53F24455D23004FD557 /* ReadWriteOnDisk.swift */; };
+		A7A7B54224455F45004FD557 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54124455F45004FD557 /* UserClass.swift */; };
+		A7A7B54624462AA9004FD557 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54524462AA9004FD557 /* LocationClass.swift */; };
+		A7A7B54824462AC7004FD557 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54724462AC7004FD557 /* LocationViewController.swift */; };
+		A7A7B54B24464224004FD557 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		A7A7B53724452F07004FD557 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		A7A7B53924453087004FD557 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		A7A7B53B244531FC004FD557 /* PrepareList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareList.swift; sourceTree = "<group>"; };
+		A7A7B53D244549DD004FD557 /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		A7A7B53F24455D23004FD557 /* ReadWriteOnDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteOnDisk.swift; sourceTree = "<group>"; };
+		A7A7B54124455F45004FD557 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
+		A7A7B54524462AA9004FD557 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
+		A7A7B54724462AC7004FD557 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +78,17 @@
 			children = (
 				22D4672E244423D500AFC55F /* AppDelegate.swift */,
 				22D46730244423D500AFC55F /* SceneDelegate.swift */,
+				A7A7B53924453087004FD557 /* AppData.swift */,
+				A7A7B53F24455D23004FD557 /* ReadWriteOnDisk.swift */,
 				A7A7B533244529B6004FD557 /* TagsViewController.swift */,
+				A7A7B53D244549DD004FD557 /* AddTagViewController.swift */,
+				A7A7B54724462AC7004FD557 /* LocationViewController.swift */,
+				A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */,
 				22D46734244423D500AFC55F /* Main.storyboard */,
+				A7A7B54124455F45004FD557 /* UserClass.swift */,
+				A7A7B54524462AA9004FD557 /* LocationClass.swift */,
 				A7A7B53524452E13004FD557 /* TagClass.swift */,
 				A7A7B53724452F07004FD557 /* TagList.swift */,
-				A7A7B53924453087004FD557 /* AppData.swift */,
 				A7A7B53B244531FC004FD557 /* PrepareList.swift */,
 				22D46737244423DB00AFC55F /* Assets.xcassets */,
 				22D46739244423DB00AFC55F /* LaunchScreen.storyboard */,
@@ -150,9 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A7B54024455D23004FD557 /* ReadWriteOnDisk.swift in Sources */,
 				A7A7B53824452F07004FD557 /* TagList.swift in Sources */,
+				A7A7B53E244549DD004FD557 /* AddTagViewController.swift in Sources */,
+				A7A7B54824462AC7004FD557 /* LocationViewController.swift in Sources */,
+				A7A7B54B24464224004FD557 /* LocationDetailsViewController.swift in Sources */,
 				22D4672F244423D500AFC55F /* AppDelegate.swift in Sources */,
 				22D46731244423D500AFC55F /* SceneDelegate.swift in Sources */,
+				A7A7B54624462AA9004FD557 /* LocationClass.swift in Sources */,
+				A7A7B54224455F45004FD557 /* UserClass.swift in Sources */,
 				A7A7B534244529B6004FD557 /* TagsViewController.swift in Sources */,
 				A7A7B53624452E13004FD557 /* TagClass.swift in Sources */,
 				A7A7B53C244531FC004FD557 /* PrepareList.swift in Sources */,

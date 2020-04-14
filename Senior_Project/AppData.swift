@@ -13,14 +13,17 @@ class AppData: NSObject {
     // singleton pattern
     static let sharedInstance = AppData()
     
-    
+    var curUser : UserClass?
     var currentTag: Array <TagClass>!
-    
+    var offlineTag: Array <TagClass>!
+    var currentLocation: Array <LocationClass>!
+    var offlineLocation: Array <LocationClass>!
     
     public override init ()
     {
         currentTag = Array<TagClass> ()
-
+        currentLocation = Array<LocationClass> ()
+    
         
     }
     
