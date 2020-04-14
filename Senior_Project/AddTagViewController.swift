@@ -10,6 +10,7 @@ import UIKit
 
 class AddTagViewController: UIViewController {
 
+    @IBOutlet weak var statusTextField: UILabel!
     @IBOutlet weak var inputName: UITextField!
     @IBOutlet weak var savebutton: UIButton!
     
@@ -19,7 +20,11 @@ class AddTagViewController: UIViewController {
         readTag()
         savebutton.layer.cornerRadius = 4
         dump(AppData.sharedInstance.curUser)
+        showStatus(s: "")
+    }
     
+    func showStatus(s: String){
+        statusTextField.text = s
     }
     
     func readTag(){
@@ -60,7 +65,8 @@ class AddTagViewController: UIViewController {
     }
     @IBAction func saveTag(_ sender: Any) {
         newTagSave(inpName: inputName.text!)
-     
+        var name = String(inputName.text!)
+        showStatus(s: "\(name) saved successfully! ")
  
         
     }
