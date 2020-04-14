@@ -10,6 +10,7 @@ import UIKit
 
 class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var locaddress: UILabel!
     @IBOutlet weak var locNameLabel: UILabel!
     @IBOutlet weak var coordinateTextField: UITextField!
     @IBOutlet weak var locTagTableView: UITableView!
@@ -18,14 +19,19 @@ class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.readData()
+       self.readData()
         locNameLabel.text = AppData.sharedInstance.currentLocation[curLocInt].locationName
-               
+        showaddress()
+        
                
                coordinateTextField.returnKeyType = UIReturnKeyType.done
                coordinateTextField.delegate = self
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func showaddress(){
+        locaddress.text = AppData.sharedInstance.currentLocation[curLocInt].coordinate
     }
     
     func readData ()
@@ -60,6 +66,7 @@ class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITa
        // itemsTableView.reloadData()
         dump(AppData.sharedInstance.currentLocation)
         ReadWriteOnDisk.writeLocation()
+        showaddress()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -70,10 +77,12 @@ class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITa
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         return true
     }
+    
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
 
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           return AppData.sharedInstance.currentTag.count;
     }
@@ -86,11 +95,16 @@ class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITa
         
     
         cell.textLabel?.text = thisList.tagName
-  
 
-               //here is programatically switch make to the table view
-                let switchView = UISwitch(frame: .zero)
-                switchView.setOn(false, animated: true)
+               // programatically switch make to the table view
+        let switchView = UISwitch(frame: .zero)
+        if(AppData.sharedInstance.currentLocation[curLocInt].tagItems.contains{ $0.tagName == thisList.tagName }){
+                  switchView.setOn(true, animated: true)
+              }
+        else{
+            switchView.setOn(false, animated: true)
+        }
+                
                 switchView.backgroundColor = .clear;
                 switchView.tag = indexPath.row // for detect which row switch Changed
                 switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
@@ -117,11 +131,9 @@ class LocationDetailsViewController: UIViewController, UITextFieldDelegate, UITa
             dump(AppData.sharedInstance.currentLocation)
             ReadWriteOnDisk.writeLocation()
         }
+        locTagTableView.reloadData()
     }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+
     
     
 
