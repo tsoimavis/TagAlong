@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22D4672B244423D500AFC55F /* Senior_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senior_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D4672B244423D500AFC55F /* TagAlong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagAlong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D4672E244423D500AFC55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D46730244423D500AFC55F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22D46735244423D500AFC55F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		22D4672C244423D500AFC55F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22D4672B244423D500AFC55F /* Senior_Project.app */,
+				22D4672B244423D500AFC55F /* TagAlong.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			);
 			name = Senior_Project;
 			productName = Senior_Project;
-			productReference = 22D4672B244423D500AFC55F /* Senior_Project.app */;
+			productReference = 22D4672B244423D500AFC55F /* TagAlong.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SJSU.Tagalong;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TagAlong;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SJSU.Tagalong;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TagAlong;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

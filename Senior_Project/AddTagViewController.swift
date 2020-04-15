@@ -64,10 +64,12 @@ class AddTagViewController: UIViewController {
         })
     }
     @IBAction func saveTag(_ sender: Any) {
+        if(inputName.text! != ""){
         newTagSave(inpName: inputName.text!)
+        
         var name = String(inputName.text!)
         showStatus(s: "\(name) saved successfully! ")
- 
+        }
         
     }
 }
