@@ -12,6 +12,7 @@ class TagClass: NSObject,NSCoding {
  
     var tagName: String!
     var tagID: Int!
+    var tagIcin: UIImage!
 
      init(inpTagName: String!, inpTagID: Int!){
         tagName = inpTagName

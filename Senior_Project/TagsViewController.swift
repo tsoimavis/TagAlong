@@ -17,12 +17,13 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewDidDisappear(true)
         
         tagsTableView.reloadData()
+       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         readTag()
-        dump(AppData.sharedInstance.curUser)
+        dump(AppData.sharedInstance.tagIconList)
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
 
@@ -74,7 +75,7 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
         let id = String(thisList.tagID)
         cell.textLabel?.text = thisList.tagName + " " + id
-
+        cell.imageView?.image = AppData.sharedInstance.tagIconList[indexPath.row]
         
         return cell
     }

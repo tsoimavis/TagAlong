@@ -18,12 +18,18 @@ class AppData: NSObject {
     var offlineTag: Array <TagClass>!
     var currentLocation: Array <LocationClass>!
     var offlineLocation: Array <LocationClass>!
+    var tagIconList: Array <UIImage>!
     
     public override init ()
     {
         currentTag = Array<TagClass> ()
         currentLocation = Array<LocationClass> ()
-    
+        
+        tagIconList = Array<UIImage> ()
+        tagIconList.append(UIImage(named: "i1")! )
+        tagIconList.append(UIImage(named: "i2")! )
+        tagIconList.append(UIImage(named: "i3")! )
+        
         
     }
     
