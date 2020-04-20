@@ -126,6 +126,7 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     {
         let newLocation = LocationClass(inpLocationName: inpName,
                                        inpCoordinate: "",
+                                       inpZuoBiao: nil,
                                        inpTagItems: [])
         
         AppData.sharedInstance.currentLocation.append(newLocation)
