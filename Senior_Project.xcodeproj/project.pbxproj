@@ -11,7 +11,10 @@
 		22D46731244423D500AFC55F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D46730244423D500AFC55F /* SceneDelegate.swift */; };
 		22D46736244423D500AFC55F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D46734244423D500AFC55F /* Main.storyboard */; };
 		22D46738244423DB00AFC55F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D46737244423DB00AFC55F /* Assets.xcassets */; };
-		22D4673B244423DB00AFC55F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D46739244423DB00AFC55F /* LaunchScreen.storyboard */; };
+		A755A8BC2450D3280064D154 /* ani.gif in Resources */ = {isa = PBXBuildFile; fileRef = A755A8BB2450D3270064D154 /* ani.gif */; };
+		A755A8C02450D3700064D154 /* launchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755A8BF2450D3700064D154 /* launchViewController.swift */; };
+		A755A8C22450DF8E0064D154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A755A8C12450DF8E0064D154 /* LaunchScreen.storyboard */; };
+		A755A8C42450DFA40064D154 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755A8C32450DFA40064D154 /* UIImage+Gif.swift */; };
 		A7568A40244C1D0900E1EA8D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7568A3F244C1D0900E1EA8D /* MapKit.framework */; };
 		A7A7B534244529B6004FD557 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B533244529B6004FD557 /* TagsViewController.swift */; };
 		A7A7B53624452E13004FD557 /* TagClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B53524452E13004FD557 /* TagClass.swift */; };
@@ -24,6 +27,9 @@
 		A7A7B54624462AA9004FD557 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54524462AA9004FD557 /* LocationClass.swift */; };
 		A7A7B54824462AC7004FD557 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54724462AC7004FD557 /* LocationViewController.swift */; };
 		A7A7B54B24464224004FD557 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */; };
+		A7DB0911244F8541003EDAF4 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB0910244F8541003EDAF4 /* IconCollectionViewCell.swift */; };
+		A7DB0913244FA4FE003EDAF4 /* TagViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB0912244FA4FE003EDAF4 /* TagViewCollectionViewCell.swift */; };
+		A7E876222450138A00534802 /* LocTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E876212450138A00534802 /* LocTagCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +38,11 @@
 		22D46730244423D500AFC55F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22D46735244423D500AFC55F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22D46737244423DB00AFC55F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		22D4673A244423DB00AFC55F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22D4673C244423DB00AFC55F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A755A8BB2450D3270064D154 /* ani.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = ani.gif; path = ../../../Downloads/ani.gif; sourceTree = "<group>"; };
+		A755A8BF2450D3700064D154 /* launchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchViewController.swift; sourceTree = "<group>"; };
+		A755A8C12450DF8E0064D154 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A755A8C32450DFA40064D154 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/Swift-4-Xcode-9---How-To-Display-GIF-in-UIImage-with-One-Line-Of-Code-in-iOS-Latest-2017-Hindi.-master 2/UIImage+Gif.swift"; sourceTree = "<group>"; };
 		A7568A3F244C1D0900E1EA8D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7A7B533244529B6004FD557 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 		A7A7B53524452E13004FD557 /* TagClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagClass.swift; sourceTree = "<group>"; };
@@ -46,6 +55,9 @@
 		A7A7B54524462AA9004FD557 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
 		A7A7B54724462AC7004FD557 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		A7DB0910244F8541003EDAF4 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IconCollectionViewCell.swift; path = ../IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7DB0912244FA4FE003EDAF4 /* TagViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7E876212450138A00534802 /* LocTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTagCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,22 +92,28 @@
 		22D4672D244423D500AFC55F /* Senior_Project */ = {
 			isa = PBXGroup;
 			children = (
+				A755A8BB2450D3270064D154 /* ani.gif */,
 				22D4672E244423D500AFC55F /* AppDelegate.swift */,
 				22D46730244423D500AFC55F /* SceneDelegate.swift */,
 				A7A7B53924453087004FD557 /* AppData.swift */,
 				A7A7B53F24455D23004FD557 /* ReadWriteOnDisk.swift */,
+				A7DB0910244F8541003EDAF4 /* IconCollectionViewCell.swift */,
+				A7DB0912244FA4FE003EDAF4 /* TagViewCollectionViewCell.swift */,
+				A7E876212450138A00534802 /* LocTagCollectionViewCell.swift */,
 				A7A7B533244529B6004FD557 /* TagsViewController.swift */,
 				A7A7B53D244549DD004FD557 /* AddTagViewController.swift */,
 				A7A7B54724462AC7004FD557 /* LocationViewController.swift */,
 				A7A7B54A24464224004FD557 /* LocationDetailsViewController.swift */,
 				22D46734244423D500AFC55F /* Main.storyboard */,
+				A755A8BF2450D3700064D154 /* launchViewController.swift */,
+				A755A8C32450DFA40064D154 /* UIImage+Gif.swift */,
+				A755A8C12450DF8E0064D154 /* LaunchScreen.storyboard */,
 				A7A7B54124455F45004FD557 /* UserClass.swift */,
 				A7A7B54524462AA9004FD557 /* LocationClass.swift */,
 				A7A7B53524452E13004FD557 /* TagClass.swift */,
 				A7A7B53724452F07004FD557 /* TagList.swift */,
 				A7A7B53B244531FC004FD557 /* PrepareList.swift */,
 				22D46737244423DB00AFC55F /* Assets.xcassets */,
-				22D46739244423DB00AFC55F /* LaunchScreen.storyboard */,
 				22D4673C244423DB00AFC55F /* Info.plist */,
 			);
 			path = Senior_Project;
@@ -167,9 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D4673B244423DB00AFC55F /* LaunchScreen.storyboard in Resources */,
 				22D46738244423DB00AFC55F /* Assets.xcassets in Resources */,
+				A755A8C22450DF8E0064D154 /* LaunchScreen.storyboard in Resources */,
 				22D46736244423D500AFC55F /* Main.storyboard in Resources */,
+				A755A8BC2450D3280064D154 /* ani.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,9 +204,14 @@
 				A7A7B53E244549DD004FD557 /* AddTagViewController.swift in Sources */,
 				A7A7B54824462AC7004FD557 /* LocationViewController.swift in Sources */,
 				A7A7B54B24464224004FD557 /* LocationDetailsViewController.swift in Sources */,
+				A7DB0911244F8541003EDAF4 /* IconCollectionViewCell.swift in Sources */,
 				22D4672F244423D500AFC55F /* AppDelegate.swift in Sources */,
 				22D46731244423D500AFC55F /* SceneDelegate.swift in Sources */,
+				A755A8C02450D3700064D154 /* launchViewController.swift in Sources */,
 				A7A7B54624462AA9004FD557 /* LocationClass.swift in Sources */,
+				A7DB0913244FA4FE003EDAF4 /* TagViewCollectionViewCell.swift in Sources */,
+				A7E876222450138A00534802 /* LocTagCollectionViewCell.swift in Sources */,
+				A755A8C42450DFA40064D154 /* UIImage+Gif.swift in Sources */,
 				A7A7B54224455F45004FD557 /* UserClass.swift in Sources */,
 				A7A7B534244529B6004FD557 /* TagsViewController.swift in Sources */,
 				A7A7B53624452E13004FD557 /* TagClass.swift in Sources */,
@@ -205,14 +229,6 @@
 				22D46735244423D500AFC55F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		22D46739244423DB00AFC55F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22D4673A244423DB00AFC55F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

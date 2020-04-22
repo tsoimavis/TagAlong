@@ -8,17 +8,14 @@
 
 import UIKit
 
-class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource  {
-
-
-    @IBOutlet weak var tagsTableView: UITableView!
+class TagsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate   {
+   
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        
-        tagsTableView.reloadData()
-       
-    }
+
+   // @IBOutlet weak var tagsTableView: UITableView!
+    @IBOutlet weak var tagsCollectionView: UICollectionView!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +25,23 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
 
         if #available(iOS 10.0, *) {
-            tagsTableView.refreshControl = refreshControl
+            tagsCollectionView.refreshControl = refreshControl
         } else {
-            tagsTableView.backgroundView = refreshControl
+
+            tagsCollectionView.backgroundView = refreshControl
         }
+        
+               let lpgr = UILongPressGestureRecognizer(target: self,
+                             action:#selector(self.handleLongPress))
+        lpgr.minimumPressDuration = 0.5
+        lpgr.delaysTouchesBegan = true
+        lpgr.delegate = self
+        self.tagsCollectionView.addGestureRecognizer(lpgr)
     }
     
    @objc func refresh(_ refreshControl: UIRefreshControl) {
-    tagsTableView.reloadData()
+//    tagsTableView.reloadData()
+    tagsCollectionView.reloadData()
         refreshControl.endRefreshing()
     }
     
@@ -62,7 +68,7 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBAction func addTag(_ sender: Any) {
     }
-    
+  /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           return AppData.sharedInstance.currentTag.count;
     }
@@ -75,7 +81,8 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
         let id = String(thisList.tagID)
         cell.textLabel?.text = thisList.tagName + " " + id
-        cell.imageView?.image = AppData.sharedInstance.tagIconList[indexPath.row]
+        
+        cell.imageView?.image = thisList.tagIcon
         
         return cell
     }
@@ -98,9 +105,76 @@ class TagsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return "Delete?"
     }
     
-    /*
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "toItemsSegue_id", sender: indexPath)
     }
     */
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {         return AppData.sharedInstance.currentTag.count;
+        
+       }
+       
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tagViewCell", for: indexPath) as! TagViewCollectionViewCell
+
+        cell.tagImg.image = AppData.sharedInstance.currentTag[indexPath.row].tagIcon
+        cell.tagNmlabel.text = AppData.sharedInstance.currentTag[indexPath.row].tagName
+
+
+                  return cell
+       }
+    @objc func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
+    //    if gestureRecognizer.state != UIGestureRecognizer.State.ended {
+      //     return
+       //}
+
+        let p = gestureRecognizer.location(in: self.tagsCollectionView)
+        let indexPath = self.tagsCollectionView.indexPathForItem(at: p)
+        if gestureRecognizer.state != UIGestureRecognizer.State.began {
+       if let index = indexPath {
+        var cell = self.tagsCollectionView.cellForItem(at: index)
+           // do stuff with your cell, for example print the indexPath
+            print(index.row)
+     
+        let alertActionCell = UIAlertController(title: "Delete Tag", message: "Are you sure to delete \(String(AppData.sharedInstance.currentTag[index.row].tagName)) ?", preferredStyle: .actionSheet)
+
+                // Configure Remove Item Action
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+                    AppData.sharedInstance.currentTag.remove(at: indexPath!.row)
+                    ReadWriteOnDisk.writeTag()
+                     dump(AppData.sharedInstance.currentTag)
+                    print("Cell Removed")
+                    self.tagsCollectionView!.reloadData()
+                })
+
+                // Configure Cancel Action Sheet
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { acion in
+                    print("Cancel actionsheet")
+                })
+
+                alertActionCell.addAction(deleteAction)
+                alertActionCell.addAction(cancelAction)
+                self.present(alertActionCell, animated: true, completion: nil)
+       
+
+            }
+        }
+    
+    else {
+           print("Could not find index path")
+       }
+
+    }
+    
+    @IBAction func delMsg(_ sender: Any) {
+
+     let alertController = UIAlertController(title: "Delete a tag", message:"Please long press the tag and confirm", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    
+    
 }
