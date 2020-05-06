@@ -10,6 +10,10 @@
 ---
 ### Screenshots
 <img width="250" alt="1" src="https://github.com/tsoimavis/TagAlong/blob/master/Senior_Project/Screen%20Shot%202020-05-05%20at%209.02.05%20PM.png?raw=true">
+<img width="250" alt="1" src="https://github.com/tsoimavis/TagAlong/blob/master/Senior_Project/Screen%20Shot%202020-05-05%20at%209.00.29%20PM.png">
+<img width="250" alt="1" src="https://github.com/tsoimavis/TagAlong/blob/master/Senior_Project/Screen%20Shot%202020-05-05%20at%209.00.18%20PM.png">
+<img width="250" alt="1" src="https://github.com/tsoimavis/TagAlong/blob/master/Senior_Project/Screen%20Shot%202020-05-05%20at%209.00.54%20PM.png">
+
 ---
 ### Tech used
 
