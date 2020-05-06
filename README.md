@@ -44,10 +44,10 @@ Project Advisor: Ishie Eswar
 
 ---
 ### Contributing
-Hidaparthi, Haasitha
-Sun, Xiaohan 
-Tsoi, Tsz Ching
-Vuong, Steven
+- Hidaparthi, Haasitha
+- Sun, Xiaohan 
+- Tsoi, Tsz Ching
+- Vuong, Steven
 
 
 ---
