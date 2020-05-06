@@ -9,7 +9,7 @@
 
 ---
 ### Screenshots
-<img width="250" alt="1" src="https://github.com/tsoimavis/CMPE172Project_FinalSubmission/blob/master/cmpe172_project/frontend/src/Component/img/Screen%20Shot%202020-05-05%20at%209.02.05%20PM.png">
+<img width="250" alt="1" src="https://github.com/tsoimavis/TagAlong/blob/master/Senior_Project/Screen%20Shot%202020-05-05%20at%209.02.05%20PM.png?raw=true">
 ---
 ### Tech used
 
