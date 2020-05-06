@@ -1,6 +1,6 @@
 # TagAlong
 
- Tag Along is an IOS application with NFC technology allowed. It is a reminder system to let users not leave their belongings behind. When they leave from specific locations, they could scan the NFC tags to check whether they take their belongings or not. They could also receive pop-up notification to remind them too
+ Tag Along is an IOS application with NFC technology enabled. It is a reminder system to let users not leave their belongings behind. When they leave from specific locations, they could scan the NFC tags to check whether they take their belongings or not. Pop-up notification will cend to user's iOS system as a reminder.
  
  ---
  ### Motivation
